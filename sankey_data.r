@@ -39,9 +39,9 @@ fig <- plot_ly(
     orientation = "h",
     node = list(
 
-      label = c("Applications", "A2", "B1", "B2", "C1", "C2"),
+      label = c("Applications", "1st Interview", "Rejected", "Ghosted", "2nd Interview", "3rd Interview"),
 
-      color = c("blue", "blue", "blue", "blue", "blue", "blue"),
+      color = c("blue", "blue", "red", "white", "blue", "blue"),
 
       pad = 15,
 
