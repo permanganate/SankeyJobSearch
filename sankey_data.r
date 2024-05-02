@@ -72,7 +72,7 @@ fig <- plot_ly(
 
 fig <- fig %>% layout(
 
-    title = "Basic Sankey Diagram",
+    title = "Job Search, 2017-2020",
 
     font = list(
 
