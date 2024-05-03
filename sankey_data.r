@@ -30,18 +30,17 @@
 # library(htmlwidgets)
 # saveWidget(p, file=paste0( getwd(), "/HtmlWidget/sankeyBasic1.html"))
 
-# new 2024:
+# new 2024, with plotly:
 library(plotly)
 
 fig <- plot_ly(
-
     type = "sankey",
     orientation = "h",
     node = list(
 
-      label = c("Applications", "1st Interview", "Rejected", "Ghosted", "2nd Interview", "3rd Interview"),
+      label = c("Applications", "1st Interview", "Rejected", "Ghosted", "2nd Interview", "3rd Interview", "Offer"),
 
-      color = c("blue", "blue", "red", "white", "blue", "blue"),
+      color = c("blue", "blue", "red", "white", "blue", "blue", "green"),
 
       pad = 15,
 
@@ -59,30 +58,23 @@ fig <- plot_ly(
 
 
     link = list(
-
-      source = c(0,1,0,2,3,3),
-
-      target = c(2,3,3,4,4,5),
-
-      value =  c(8,4,2,8,4,2)
-
+      source = c(0,   0,  0,  1,  1,  1,  4,  5,  1),
+      target = c(1,   2,  3,  2,  3,  4,  5,  2,  6),
+      value =  c(10,  50, 50, 5,  3,  1,  1,  1,  1)
     )
 
   )
-
 fig <- fig %>% layout(
-
-    title = "Job Search, 2017-2020",
-
-    font = list(
-
-      size = 10
-
-    )
-
-)
-
-
+  
+      title = "Job Search 2017-2020",
+  
+      font = list(
+  
+        size = 10
+  
+      )
+  
+  )
 fig
 
 # data:
