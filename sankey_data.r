@@ -37,25 +37,15 @@ fig <- plot_ly(
     type = "sankey",
     orientation = "h",
     node = list(
-
       label = c("Applications", "1st Interview", "Rejected", "Ghosted", "2nd Interview", "3rd Interview", "Offer"),
-
       color = c("blue", "blue", "red", "white", "blue", "blue", "green"),
-
       pad = 15,
-
       thickness = 20,
-
       line = list(
-
         color = "black",
-
         width = 0.5
-
       )
-
     ),
-
 
     link = list(
       source = c(0,   0,  0,  1,  1,  1,  4,  5,  1),
@@ -67,13 +57,10 @@ fig <- plot_ly(
 fig <- fig %>% layout(
   
       title = "Job Search 2017-2020",
-  
       font = list(
-  
         size = 10
-  
+      margin = list(t = 40, l = 10, r = 10, b = 10)
       )
-  
   )
 fig
 
